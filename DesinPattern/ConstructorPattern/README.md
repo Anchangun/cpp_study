@@ -1,10 +1,9 @@
 ### Telescoping Constructor Pattern
 
-* 점층적 생성자 패턴 (Telescoping Constructor Pattern)<br/>
-
-- 매개변수를 가지는 생성자를 다양하게 미리 만들어 두는 것.  <br/>
-- 생성자를 특정하여 명백하게 배치 생성 가능.<br/>
-- 구현해두는 것에 따라 필수 매개변수, 선택 매개변수 구분<br/>
+#### 점층적 생성자 패턴 (Telescoping Constructor Pattern)<br/>
+* 매개변수를 가지는 생성자를 다양하게 미리 만들어 두는 것.  <br/>
+* 생성자를 특정하여 명백하게 배치 생성 가능.<br/>
+* 구현해두는 것에 따라 필수 매개변수, 선택 매개변수 구분<br/>
 
 장점<br/>
 * 구현이 간편함<br/>
