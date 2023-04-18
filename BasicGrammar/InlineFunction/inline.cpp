@@ -11,11 +11,11 @@ int main() {
 	b = square(3.0 + 2.0);
 	std::cout << " a = " << a << " b = " << b << std::endl;
 	std::cout << " c = " << c;
-	std::cout <<" cÀÇ Á¦°ö = "<<square(c++)<<std::endl; 
+	std::cout <<" cï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ = "<<square(c++)<<std::endl;
 	std::cout << " c = " << c << std::endl;
 	{
 		std::cout << " c1 : " << c << std::endl;
-		int x = a, y = b;
+		double x = a, y = b;
 		c = x - y;
 		std::cout << c << std::endl;
 	}
@@ -23,11 +23,11 @@ int main() {
 	{
 		std::cout << " c2 : " << c << std::endl;
 		// x = c; impossibility
-		int x = c;
+		double x = c;
 		std::cout << x << std::endl;
 	}
 
-	std::cout << square(3 + 2) << std::endl;
+	std::cout << SQU(3 + 2) << std::endl;
 
 
 
