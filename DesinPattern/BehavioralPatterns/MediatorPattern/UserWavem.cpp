@@ -1,11 +1,11 @@
 #include "UserWavem.hpp"
 
-UserWavem::UserWavem(const std::string& id, IMediator* mediator) : IColleague(mediator), m_id(id){
+UserWavem::UserWavem(const std::string& id, std::shared_ptr<IMediator> mediator) : IColleague(mediator), m_id(id){
 }
 
 void UserWavem::send(const std::string& message){
 	std::cout << "UserWavem Send " << std::endl;
-	m_mediator->send(message, this);
+	m_mediator->send(message, shared_from_this());
 }
 
 void UserWavem::recv(const std::string& message){

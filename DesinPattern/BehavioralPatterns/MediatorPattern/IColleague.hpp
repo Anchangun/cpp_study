@@ -3,9 +3,9 @@
 class IMediator;
 class IColleague {
 public :
-	IColleague(IMediator* mediator) :m_mediator(mediator) {}
+	IColleague(std::shared_ptr<IMediator> mediator) :m_mediator(mediator) {}
 	virtual void send(const std::string& message) = 0;
 	virtual void recv(const std::string& message) = 0;
 protected:
-	IMediator* m_mediator;
+	std::shared_ptr<IMediator> m_mediator;
 };

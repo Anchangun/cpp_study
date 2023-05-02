@@ -2,9 +2,9 @@
 #include"ConcreteMediator.hpp"
 #include"UserLilac.hpp"
 int main() {
-	ConcreteMediator* mediator = new ConcreteMediator();
-	UserWavem* wavem = new UserWavem("code", mediator);
-	UserLilac* lilac = new UserLilac("changun", mediator);
+	std::shared_ptr<ConcreteMediator> mediator = std::make_shared<ConcreteMediator>();
+	std::shared_ptr<UserWavem> wavem = std::make_shared<UserWavem>("code", mediator);
+	std::shared_ptr<UserLilac> lilac = std::make_shared<UserLilac>("changun", mediator);
 
 	mediator->set_user_wavem(wavem);
 	mediator->set_user_lilac(lilac);
@@ -12,10 +12,6 @@ int main() {
 	wavem->send("hi, changun");
 	lilac->send("Do u want to do climbing?");
 	wavem->send("Sure, Let's go");
-	
-	delete lilac;
-	delete wavem;
-	delete mediator;
 
 	return 0;
 }

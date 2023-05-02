@@ -1,12 +1,12 @@
 #include "UserLilac.hpp"
 
-UserLilac::UserLilac(const std::string& id, IMediator* mediator) : IColleague(mediator),m_id(id)
+UserLilac::UserLilac(const std::string& id, std::shared_ptr<IMediator> mediator) : IColleague(mediator),m_id(id)
 {
 }
 
 void UserLilac::send(const std::string& message) {
 	std::cout << "UserLilac Send " << std::endl;
-	m_mediator->send(message, this);
+	m_mediator->send(message, shared_from_this());
 }
 
 void UserLilac::recv(const std::string& message) {
