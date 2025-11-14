@@ -4,7 +4,7 @@
 
 #ifndef LEFT_FIRST_INSERT_HPP
 #define LEFT_FIRST_INSERT_HPP
-#include "Presentation/insert_strategy.hpp"
+#include "Application/insert_strategy.hpp"
 namespace INSERT {
 class LeftFirstInsert : public InsertStrategy{
 public :

@@ -6,18 +6,18 @@
 #define TREE_BUILDER_HPP
 #include <memory>
 
-#include "insert_strategy.hpp"
+#include "Application/insert_strategy.hpp"
 #include "Domain/node.hpp"
 
 namespace INSERT {
 
-class TreeBuilder {
+class InsertBuilder {
 private :
-    std::unique_ptr<Node> root;
-    std::unique_ptr<InsertStrategy> strategy;
+    std::unique_ptr<Node> root_;
+    std::unique_ptr<InsertStrategy> strategy_;
 public :
-    explicit TreeBuilder(std::unique_ptr<InsertStrategy> start);
-    TreeBuilder& insert(int data);
+    explicit InsertBuilder(std::unique_ptr<InsertStrategy> start);
+    std::unique_ptr<Node> insert(int data);
     std::unique_ptr<Node> build();
 };
 
