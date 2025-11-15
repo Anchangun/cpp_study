@@ -7,7 +7,7 @@
 #include <random>
 
 namespace INSERT {
-    constexpr RandomData::RandomData(int min , int max): min_(min), max_(max) {
+    RandomData::RandomData(int min , int max): min_(min), max_(max) {
 
     }
     std::vector<int> RandomData::get_random_data() {

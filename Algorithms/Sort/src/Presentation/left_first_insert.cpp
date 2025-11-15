@@ -4,20 +4,11 @@
 
 #include "Presentation/left_first_insert.hpp"
 
+INSERT::LeftFirstInsert::LeftFirstInsert() {
+}
+
 void INSERT::LeftFirstInsert::insert(
             std::unique_ptr<Node>& root,
             int data) {
-    if (!root) {
-        root = std::make_unique<Node>(data);
-        return;
-    }
-    if (!root->left) {
-        root->left = std::make_unique<Node>(data);
-    }
-    else if (!root->right) {
-        root->right = std::make_unique<Node>(data);
-    }
-    else {
-        insert(root->left, data);
-    }
+
 }

@@ -10,7 +10,7 @@
 namespace PRINT {
     class PrintStrategy {
     public :
-            virtual void print(const std::unique_ptr<Node>& node, int depth=0)=0;
+            virtual void print(Node* node, int depth=0)=0;
             virtual ~PrintStrategy() = default;
     };
 

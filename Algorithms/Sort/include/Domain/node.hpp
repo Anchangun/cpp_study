@@ -10,7 +10,7 @@ struct Node{
   int data;
   std::unique_ptr<Node> left;
   std::unique_ptr<Node> right;
-  explicit Node(int v) : data(0){
+  explicit Node(int v) : data(v){
   }
 };
 

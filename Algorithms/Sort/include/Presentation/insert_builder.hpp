@@ -5,6 +5,7 @@
 #ifndef TREE_BUILDER_HPP
 #define TREE_BUILDER_HPP
 #include <memory>
+#include <vector>
 
 #include "Application/insert_strategy.hpp"
 #include "Domain/node.hpp"
@@ -17,7 +18,8 @@ private :
     std::unique_ptr<InsertStrategy> strategy_;
 public :
     explicit InsertBuilder(std::unique_ptr<InsertStrategy> start);
-    std::unique_ptr<Node> insert(int data);
+    InsertBuilder& insert(int data);
+    InsertBuilder& insert(const std::vector<int>& values);
     std::unique_ptr<Node> build();
 };
 
