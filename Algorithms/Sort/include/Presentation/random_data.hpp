@@ -10,12 +10,12 @@ namespace INSERT {
 
 class RandomData {
 private :
-    constexpr int min_;
-    constexpr int max_;
+    const int min_;
+    const int max_;
 
 public :
     std::vector<int> get_random_data();
-    constexpr RandomData(int min , int max);
+    RandomData(int min , int max);
 };
 
 } // INSERT

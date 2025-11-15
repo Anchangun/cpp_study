@@ -10,7 +10,7 @@ namespace PRINT {
 
 class PreorderPrint : public PrintStrategy {
 public :
-    void print(const std::unique_ptr<Node>& node , int depth) override;
+    void print(Node* node , int depth) override;
 };
 
 } // PRINT

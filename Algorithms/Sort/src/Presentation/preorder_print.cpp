@@ -7,7 +7,7 @@
 #include <iostream>
 
 namespace PRINT {
-    void PreorderPrint::print(const std::unique_ptr<Node> &node, int depth) {
+    void PreorderPrint::print(Node* node, int depth) {
         if (!node) {
             return ;
         }
@@ -15,7 +15,7 @@ namespace PRINT {
             std::cout << ' ';
         }
         std::cout<< node->data << "\n";
-        print(node->left, depth+1);
-        print(node->right, depth+1);
+        print(node->left.get(), depth+1);
+        print(node->right.get(), depth+1);
     }
 } // PRINT

@@ -14,9 +14,9 @@ namespace PRINT {
     class PrintBuilder {
     private:
             std::unique_ptr<PrintStrategy> strategy_;
-            const std::unique_ptr<Node>* root_;
+            Node* root_;
     public:
-        explicit PrintBuilder(std::unique_ptr<Node>* root);
+        explicit PrintBuilder(Node* root);
         PrintBuilder& set_strategy(std::unique_ptr<PrintStrategy> strat);
         void build();
     };

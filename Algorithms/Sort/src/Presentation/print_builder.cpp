@@ -5,7 +5,7 @@
 #include "Presentation/print_builder.hpp"
 
 namespace PRINT {
-    PrintBuilder::PrintBuilder(std::unique_ptr<Node> *root)
+    PrintBuilder::PrintBuilder(Node* root)
         : root_(root), strategy_(nullptr){
     }
 
@@ -18,6 +18,6 @@ namespace PRINT {
         if (!strategy_ || !root_) {
             return;
         }
-        strategy_->print(*root_);
+        strategy_->print(root_, 0);  // depth 0부터 시작
     }
 }
