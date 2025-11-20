@@ -16,6 +16,11 @@ add_executable(Sort src/main.cpp
         include/Presentation/preorder_print.hpp
         src/Presentation/print_builder.cpp
         include/Presentation/print_builder.hpp
+        include/Application/sort_strategy.hpp
+        src/Presentation/insertion_sort.cpp
+        include/Presentation/insertion_sort.hpp
+        src/Presentation/sort_builder.cpp
+        include/Presentation/sort_builder.hpp
 )
 
 target_include_directories(Sort PRIVATE include)
